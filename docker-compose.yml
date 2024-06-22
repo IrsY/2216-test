@@ -15,7 +15,7 @@ services:
       - website-network
   
 
-    jenkins:
+  jenkins:
     build: ./jenkins
     container_name: jenkins
     user: root
