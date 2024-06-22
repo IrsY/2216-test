@@ -13,7 +13,23 @@ services:
     restart: unless-stopped
     networks:
       - website-network
-    
+  
+
+    jenkins:
+    build: ./jenkins
+    container_name: jenkins
+    user: root
+    ports:
+      - "8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - "JAVA_OPTS=-Dhttp.proxyHost=mechkeys.ddns.net -Dhttp.proxyPort=8888 -Dhttps.proxyHost=mechkeys.ddns.net -Dhttps.proxyPort=8888"      # Adjust as needed
+      - "JENKINS_OPTS=--httpPort=8080"  # External URL
+    restart: unless-stopped
+
+
   frontend:
     image: frontend
     container_name: frontend
