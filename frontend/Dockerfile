@@ -5,7 +5,6 @@ FROM nginx:latest
 RUN apt-get update && apt-get install -y \
     php-fpm \
     php-mysqli \
-    mysqli \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy custom Nginx configuration file
