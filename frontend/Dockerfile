@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 # Copy HTML files to the Nginx web root directory
-COPY ./html /var/www/html
+#COPY ./html /var/www/html
 
 # Expose port 80
 EXPOSE 80
