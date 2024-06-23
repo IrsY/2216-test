@@ -34,8 +34,6 @@ services:
     container_name: frontend
     ports:
       - "80"
-    volumes:
-      - ./frontend/html:/var/www/html
 
   backend:
     build: ./backend
