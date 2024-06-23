@@ -40,6 +40,8 @@ services:
     container_name: backend
     ports:
       - "9000"
+    volumes:
+      - ./frontend/html:/var/www/html
 
   mysql-active:
     image: mysql/mysql-server:latest
