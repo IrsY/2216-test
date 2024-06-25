@@ -30,7 +30,7 @@ services:
 
 
   frontend:
-    image: frontend
+    image: ./frontend
     container_name: frontend
     ports:
       - "80"
