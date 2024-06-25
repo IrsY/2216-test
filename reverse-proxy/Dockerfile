@@ -3,8 +3,8 @@ FROM nginx:latest
 
 
 # Copy custom Nginx configuration file
-COPY ./reverse-proxy/nginx.conf /etc/nginx/nginx.conf
-COPY ./reverse-proxy/certs/mechkeys.ddns.net.crt /etc/nginx/certs/mechkeys.ddns.net.crt
+COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./certs/mechkeys.ddns.net.crt /etc/nginx/certs/mechkeys.ddns.net.crt
 
 # Copy HTML files to the Nginx web root directory
 #COPY ./html /var/www/html
